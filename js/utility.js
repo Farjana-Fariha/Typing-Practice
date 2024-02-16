@@ -20,7 +20,22 @@ function generateAlphabet(){
    return alphabet;
 }
 // Hightlight alphabet
-function hightlightBg(elementId){
+function setHightlightBg(elementId){
    const getAlphabet = document.getElementById(elementId);
    getAlphabet.classList.add('bg-orange-300')
+}
+function removeHightlightBg(elementId){
+   const getAlphabet = document.getElementById(elementId);
+   getAlphabet.classList.remove('bg-orange-300')
+}
+// get current score and life 
+function getPrevData(elementId){
+   const element = document.getElementById(elementId);
+   const data = parseInt(element.innerText);
+   return data;
+}
+// set new data
+function setCurrentData(elementId, value){
+   const element = document.getElementById(elementId);
+   element.innerText = value;
 }
